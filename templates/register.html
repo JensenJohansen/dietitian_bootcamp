@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Register</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+	</head>
+	<body>
+		<div class="register">
+            <div class="navbar-header" style="alignment: center; background-color: #3274d6">
+                    <h1>
+                     <a style="color: white; width: 30px; height: 30px">topaz diet assistant</a>
+                    </h1>
+            </div>
+			<h1>Register</h1>
+			<div class="links">
+				<a href="{{ url_for('login') }}">Login</a>
+				<a href="{{ url_for('register') }}" class="active">Register</a>
+                <a href="{{ url_for('vc') }} ">Voice Assistant</a>
+			</div>
+			<form action="{{ url_for('register') }}" method="post" autocomplete="off">
+				<label for="username">
+					<i class="fas fa-user"></i>
+				</label>
+				<input type="text" name="username" placeholder="Username" id="username" required>
+
+				<label for="password">
+					<i class="fas fa-lock"></i>
+				</label>
+				<input type="password" name="password" placeholder="Password" id="password" required>
+
+				<label for="height">
+					<i class="fas fa-hashtag"></i>
+				</label>
+				<input type="text" name="height" placeholder="Height(metres)" id="height" required>
+
+                <label for="weight">
+					<i class="fas fa-weight"></i>
+				</label>
+				<input type="text" name="weight" placeholder="Weight(kilograms)" id="weight" required>
+
+                <label for="age">
+					<i class="fas fa-child"></i>
+				</label>
+				<input type="text" name="age" placeholder="age" id="age" required>
+
+                <label for="gender">
+					<i class="fas fa-genderless"></i>
+				</label>
+				<input type="text" name="gender" placeholder="gender(male or female)" id="gender" required>
+
+                <label for="exercises">
+					<i class="fas fa-basketball-ball"></i>
+				</label>
+				<input type="text" name="exercises" placeholder="often/rearly/never" id="exercises" required>
+
+                <label for="workType">
+					<i class="fas fa-screwdriver"></i>
+				</label>
+				<input type="text" name="workType" placeholder="your occupation" id="workType" required>
+
+
+                <label for="region">
+					<i class="fas fa-map"></i>
+				</label>
+				<input type="text" name="region" placeholder="your region" id="region" required>
+
+				<input type="submit" value="Register">
+			</form>
+		</div>
+	</body>
+</html>
